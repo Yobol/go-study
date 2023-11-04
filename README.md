@@ -7,7 +7,7 @@
 ### Introduction
 
 - `workspace` 在 `Go 1.18` 版本后引入；
-- `workspace` 即工作空间，用于统一管理多个软件模块，如可以使用一条命令快速测试、构建和运行多个模块中的代码；
+- `workspace` 即工作空间，用于统一管理多个软件模块，如可以快速测试、构建和运行多个模块中的代码；
 - `workspace` 使用 `go work` 工具进行管理，配置在 `go.work` 文件中，用法和 `go mod` 相似；
 - `workspace` 可以不使用 `replace` 指令就实现替换模块的功能（见示例）。
 
@@ -41,8 +41,12 @@ go run ./module1
 
 #### go work use
 
-将指定模块添加到当前工作目录中：
+将指定模块添加到当前工作空间中。
 
 ```Shell
+# 将指定模块加入到当前工作空间
 go work use ./module2
+
+# 将指定目录下的所有模块都加入到当前工作空间
+go work use -r ./modules
 ```
