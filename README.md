@@ -50,3 +50,7 @@ go work use ./module2
 # 将指定目录下的所有模块都加入到当前工作空间
 go work use -r ./modules
 ```
+
+## Generics
+
+[Tutorials: Getting started with generics](https://go.dev/doc/tutorial/generics)
